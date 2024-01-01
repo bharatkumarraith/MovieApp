@@ -1,0 +1,68 @@
+<div class="container-fluid" id="container1">
+  <a routerLink="#" onclick="history.back()" class="previous round">&#8249;</a>
+  <div class="container-fluid" id="container2">
+    <div>
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/{{itemList.poster_path}}" alt="error" width="100%" height="100%">
+      </div>
+      <div class="buttons">
+        <button><a href="https://www.themoviedb.org/video/play?key={{video}}">Watch</a><br></button>
+        <div>
+          <button mat-icon-button (click)="toggleSelected()" id="fav">
+            <mat-icon *ngIf="selected" aria-label="Example icon-button with a heart icon">
+              favorite
+            </mat-icon>
+            <mat-icon *ngIf="!selected" aria-label="Example icon-button with a heart icon">
+              favorite_border
+            </mat-icon>
+            <div *ngIf="!selected">
+              <span class="tooltip-text">Add to Fav</span>
+            </div>
+            <div *ngIf="selected">
+              <span class="tooltip-text">Remove from Fav</span>
+            </div>
+          </button>
+          <div id="snackbar"></div>
+        </div>
+        <button><a href="https://www.themoviedb.org/video/play?key={{clip}}">Clip</a><br></button>
+      </div>
+    </div>
+    <div class="cont">
+        <h1 id="lis">{{itemList.title}}</h1><br>
+        <p id="ite">{{itemList.overview}}</p><br>
+        <h1 class="cs"id="cast">Cast</h1><br>
+        <!-- <table class="table">
+          <thead>
+            <tr>
+              <th>Profile</th>
+              <th>Name</th>
+              <th>Character</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let c of cast">
+              <td *ngIf="c.profile_path !== null">
+                <img src="https://image.tmdb.org/t/p/w500/{{c.profile_path}}" alt="..." width="100px" height="100px">
+              </td>
+              <td *ngIf="c.profile_path !== null" class="setMargin">{{c.name}}</td>
+              <td *ngIf="c.profile_path !== null" class="setMargin">{{c.character}}</td>
+            </tr>
+          </tbody>
+        </table> -->
+        <div id="main">
+          <mat-card class="example-card" *ngFor="let c of cast">
+            <mat-card-header>
+              <mat-card-subtitle id="ti" *ngIf="c.profile_path !== null">{{c.name}}</mat-card-subtitle>
+              <mat-card-subtitle *ngIf="c.profile_path !== null">{{c.character}}</mat-card-subtitle>
+              
+            </mat-card-header>
+            <img id="im" mat-card-image src="https://image.tmdb.org/t/p/w500/{{c.profile_path}}" alt="">
+          </mat-card>
+    </div>
+     
+      </div>
+
+    
+
+      
+  </div>

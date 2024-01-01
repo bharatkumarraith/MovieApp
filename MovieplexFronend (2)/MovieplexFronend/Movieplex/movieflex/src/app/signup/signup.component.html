@@ -1,0 +1,24 @@
+<span id="btn">
+  <button mat-icon-button style="float: right;" matDialogClose>
+    <mat-icon>close</mat-icon>
+  </button>
+</span>
+
+
+<form [formGroup]="registrationForm" (ngSubmit)="addUser()">
+  <h1>Sign Up</h1>
+
+  <input type="text" placeholder="Name" formControlName="name" id="name" />
+
+  <input type="email"  placeholder="Email" formControlName="email" id="email" />
+
+  <input type="password" placeholder="Password" formControlName="password" id="password" />
+
+  <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" id="confirmPassword" />
+
+  <input type="text" placeholder="Phone Number" formControlName="phoneNo" id="phoneNo" />
+
+  <input type="file" (change)="onImageUpload($event)" accept="image/*">
+
+  <button type="submit">Submit</button>
+</form>

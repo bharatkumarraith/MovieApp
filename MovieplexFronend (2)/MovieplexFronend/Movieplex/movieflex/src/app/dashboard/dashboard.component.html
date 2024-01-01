@@ -1,0 +1,84 @@
+<div class="container-fluid g-0">
+  <main class="cont2">
+<div class="recommended">
+  <h1>Recommended Movies</h1>
+  <div class="card-container">
+    <div *ngFor="let item of movieList">
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+        [routerLink]="['/movies', item.id]"><br>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="action">
+  <h1>Action Movies</h1>
+  <div class="card-container">
+    <div *ngFor="let item of actionMovies">
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+          [routerLink]="['/movies',item.id]"><br>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="action">
+  <h1>Comedy Movies</h1>
+  <div class="card-container">
+    <div *ngFor="let item of comedyMovies">
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+          [routerLink]="['/movies',item.id]"><br>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="action">
+  <h1>Animation Movies</h1>
+  <div class="card-container">
+    <div *ngFor="let item of animatedMovies">
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+          [routerLink]="['/movies',item.id]"><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="action">
+  <h1>Documentary Movies</h1>
+  <div class="card-container">
+    <div *ngFor="let item of documentaryMovies">
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+          [routerLink]="['/movies',item.id]"><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="action">
+  <h1>Science Fiction Movies</h1>
+  <div class="card-container">
+    <div *ngFor="let item of scienceFictionMovies">
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+          [routerLink]="['/movies',item.id]"><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="action">
+  <h1>Thriller Movies</h1>
+  <div class="card-container">
+    <div *ngFor="let item of thrillerMovies">
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" alt="error" width="200px" height="300px"
+          [routerLink]="['/movies',item.id]"><br>
+      </div>
+    </div>
+  </div> 
+</div>
+</main>
+</div>
